@@ -1,25 +1,6 @@
 Restlog
 =======
 
-Builds
------
-master
-----
-[![Build Status](https://semaphoreci.com/api/v1/projects/c1a63ea8-5a3c-44ab-929c-aa17e6296686/492521/badge.svg)](https://semaphoreci.com/cschaf/restlog)
-
-
-develop
----
-[![BuildStatus](https://semaphoreci.com/api/v1/projects/c1a63ea8-5a3c-44ab-929c-aa17e6296686/528810/badge.svg)](https://semaphoreci.com/cschaf/restlog)
-
-**Dev**:
-restlog.herokuapp.com
-
-
-**Production**:
-restlog.io
-
-
 
 Data API
 ---------
