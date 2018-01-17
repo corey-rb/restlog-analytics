@@ -1,0 +1,20 @@
+<h2>Profile</h2>
+<div>
+  Email: {{ user.email }}<br/>
+  Name: {{ user.name }}
+</div>
+<div>
+  <a ui-sref="restlog.userBilling" >Update Billing Information</a>
+</div>
+<div>
+  Key: {{ user.account_key }}<br/>
+  <a ui-sref="restlog.confirmAccountKey" >New Key</a>
+</div>
+<table class="value-table" border="1px">
+  <thead class="value-table-head"><th>Apps</th></thead>
+  <tbody>
+  <tr ng-repeat="app in apps" class="value-table-row">
+    <td class="value-table-cell">{{ app.name}}</td>
+  </tr>
+  </tbody>
+</table>

@@ -1,0 +1,3 @@
+object @config
+
+attributes :version

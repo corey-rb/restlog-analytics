@@ -1,0 +1,28 @@
+<div id="master-container">
+
+  <!-- left nav menu -->
+  <aside data-ng-include="'restlog/blocks/aside.html'" id="app-navigation">
+  </aside>
+
+  <div id="app-body">
+
+    <!-- top nav bar -->
+    <header data-ng-include="'restlog/blocks/header.html'" id="app-header">
+    </header>
+
+    <!-- content -->
+    <section id="app-content" class="app-content-body fade-in-up" ui-view>
+
+    </section>
+
+    <!-- footer -->
+    <footer id="app-footer">
+
+      Copyright &copy; 2015 RestLog - Powered by <a href="http://www.roguebit.io">RogueBit</a> All Rights Reserved // <a data-method="delete" href="/users/sign_out" rel="nofollow">Sign out</a> // <a ui-sref="restlog.reportBug" >Report a bug</a>
+      <span class="version">{{app.version}} </span>
+
+    </footer>
+
+  </div>
+
+</div>

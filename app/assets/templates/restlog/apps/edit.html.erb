@@ -1,0 +1,84 @@
+<div id="view-app-detail-edit">
+
+  <div class="page-heading">
+
+    <div class="page-name">
+      <h2>Edit: {{ userApp.name }}</h2>
+    </div>
+
+  </div>
+
+  <div class="page-errors">
+    <ul>
+      <li ng-repeat="err in errors track by err">
+        {{ err }}
+    </ul>
+  </div>
+
+  <div class="app-edit-options">
+    <div class="app-selections">
+      Name: <input type="text" ng-model="userApp.name" ng-required name="name"/>
+      <label for="appmonitor">
+        Monitor
+      </label>
+      <select ng-model="userApp.monitor" id="appmonitor" ng-selected="userApp.monitor">
+        <option id="true" value="true">Yes</option>
+        <option id="false" value="false">No</option>
+      </select>
+    </div>
+
+    <div class="monitoring-levels">
+        Monitor Levels: <span>{{ userApp.message_levels }}</span>
+        <dl ng-repeat="level in log_levels">
+          <dd><input type="checkbox" checklist-model="userApp.message_levels" checklist-value="level.code"  /></dd>
+          <dt>{{ level.name }}</dt>
+        </dl>
+
+        <div class="button-selections">
+          <button class="button-colored" ng-click="checkAll()">check all</button>
+          <button class="button-colored" ng-click="uncheckAll()">uncheck all</button>
+        </div>
+    </div>
+  </div>
+
+
+
+  <div class="choose-color">
+    <h3>Choose App Color:</h3>
+    <dl>
+      <dd><input type="radio" ng-model="userApp.hex_color_label" value="white" /></dd>
+      <dt>White</dt>
+    </dl>
+    <dl>
+      <dd><input type="radio" ng-model="userApp.hex_color_label" value="red" /></dd>
+      <dt>Red</dt>
+    </dl>
+    <dl>
+      <dd><input type="radio" ng-model="userApp.hex_color_label" value="blue" /></dd>
+      <dt>Blue</dt>
+    </dl>
+    <dl>
+      <dd><input type="radio" ng-model="userApp.hex_color_label" value="green" /></dd>
+      <dt>Green</dt>
+    </dl>
+    <dl>
+      <dd><input type="radio" ng-model="userApp.hex_color_label" value="orange" /></dd>
+      <dt>Orange</dt>
+    </dl>
+    <dl>
+      <dd><input type="radio" ng-model="userApp.hex_color_label" value="yellow" /></dd>
+      <dt>Yellow</dt>
+    </dl>
+    <dl>
+      <dd><input type="radio" ng-model="userApp.hex_color_label" value="purple" /></dd>
+      <dt>Purple</dt>
+    </dl>
+  </div>
+
+  <div class="submit-edits">
+    <form class="" role="form" ng-submit="updateApp(userApp)">
+      <input name="submit" type="submit" value="Save App" class="button-colored"/>
+    </form>
+  </div>
+
+</div>

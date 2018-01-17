@@ -1,0 +1,164 @@
+#view-app-detail {
+  overflow: hidden;
+
+  .app-name {
+    margin: 0 0 40px 0;
+
+    h2 {
+      font-size: 3.4em;
+      text-transform: uppercase;
+    }
+  }
+  .app-details {
+    margin: 0 0 30px 0;
+    background: $white;
+    border: 1px solid #DDDDDD;
+    padding: 20px;
+    display: inline-block;
+    float: left;
+
+    > dl {
+      margin: 0 50px 0 0;
+      float: left;
+
+      > dt {
+        display: inline;
+        margin: 0 8px 0 0;
+        font-weight: 700;
+      }
+      > dd {
+        display: inline;
+      }
+    }
+  }
+  .filter-options {
+    float: left;
+    clear: both;
+    padding: 20px 20px 10px 20px;
+    border: 1px solid #DDDDDD;
+    background-color: #FFFFFF;
+
+    dl {
+      margin: 0 0 10px 0;
+
+      > dt {
+        display: block;
+        font-weight: 500;
+      }
+      select {
+        margin: 5px 0 0 0;
+        width: 100px;
+
+        option {
+          padding: 3px 10px;
+        }
+      }
+      .button-colored {
+        margin: 15px 0 0 0;
+        display: block;
+        padding: 7px 0;
+        width: 100%;
+      }
+      .new {
+        padding: 7px 0;
+        text-align: center;
+        display: block;
+        width: 100%;
+        margin: 15px 0 0 0;
+      }
+
+    }
+  }
+  .mc-setup {
+    float: left;
+    margin: 0 0 0 100px;
+    padding: 20px;
+    opacity: 0;
+    border: 1px solid #DDDDDD;
+    background-color: #FFFFFF;
+  	-webkit-transition: all 500ms ease-out;
+    -moz-transition: all 500ms ease-out;
+    transition: all 500ms ease-out;
+
+    dl {
+      margin: 0 0 10px 0;
+
+      > dt {
+        display: block;
+        font-weight: 500;
+      }
+      select {
+        margin: 5px 0 0 0;
+        width: 100px;
+
+        option {
+          padding: 3px 10px;
+        }
+      }
+      input[type=text] {
+        margin: 5px 0 0 0;
+      }
+      .button-colored {
+        margin: 10px 0 0 0;
+      }
+
+    }
+  }
+  .mc-setup.active {
+    margin: 0 0 0 30px;
+    opacity: 1;
+  }
+  .message-event-data {
+    float: left;
+    width: 100%;
+    margin: 30px 0 0 0;
+
+    .table-heading {
+      overflow: hidden;
+      padding: 0 0 5px 0;
+
+      .table-title {
+        float: left;
+        font-size: 2.0em;
+        text-transform: uppercase;
+        font-weight: $weight-medium;
+      }
+      .table-details {
+        float: right;
+      }
+    }
+    .table-data {
+      border: 1px solid #CCCCCC;
+      background-color: #FFFFFF;
+
+      > ul {
+        padding: 10px 15px;
+
+        > li.date-create {
+          margin: 0 0 5px 0;
+          font-weight: 700;
+          font-size: 0.8em;
+          font-style: italic;
+        }
+      }
+      > ul.level-0 {
+        border-left: 5px solid #3498db;
+      }
+      > ul.level-1 {
+        border-left: 5px solid #27ae60;
+      }
+      > ul.level-2 {
+        border-left: 5px solid #f39c12;
+      }
+      > ul.level-3 {
+        border-left: 5px solid #d35400;
+      }
+      > ul.level-4 {
+        border-left: 5px solid #c0392b;
+      }
+      > ul:nth-child(2n+2) {
+        background-color: #EEEEEE;
+      }
+    }
+  }
+}

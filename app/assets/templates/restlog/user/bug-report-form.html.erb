@@ -1,0 +1,9 @@
+<h3>Report a Bug</h3>
+<form novalidate class="simple-form" role="form" ng-submit="submitBugReport(bugReport)" enctype="application/x-www-form-urlencoded">
+  Type/Subject:
+  <input type="text" ng-model="bugReport.type" name="bugType" ng-required /><br/>
+  Description:
+  <textarea ng-model="bugReport.description" name="bugDescription" ng-required ></textarea><br/>
+  <input type="submit" name="submit" />
+  <input type="reset" />
+</form>

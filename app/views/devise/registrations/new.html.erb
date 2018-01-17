@@ -1,0 +1,60 @@
+<div id="page-login">
+
+  <div class="login-bg"></div>
+
+  <div class="login-container">
+    <div class="login-content">
+      <div class="login-logo"></div>
+
+      <h2>Sign up</h2>
+
+      <div class="login-fields">
+
+        <% if flash[:notice] %>
+          <div class="notice"><%= flash[:notice] %></div>
+        <% end %>
+
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= devise_error_messages! %>
+
+        <div>
+          <label for="beta_key">Beta Token</label>
+          <input type="text" name="beta[beta_key]" id="beta_key" />
+        </div>
+
+        <div>
+          <%= f.label :name %>
+          <%= f.text_field :name %>
+        </div>
+
+        <div>
+          <%= f.label :email %>
+          <%= f.email_field :email %>
+        </div>
+
+        <div>
+          <%= f.label :password %> <% if @validatable %>(<%= @minimum_password_length %> characters minimum)<% end %>
+          <%= f.password_field :password, autocomplete: "off" %>
+        </div>
+
+        <div>
+          <%= f.label :password_confirmation %>
+          <%= f.password_field :password_confirmation, autocomplete: "off" %>
+        </div>
+
+        <div>
+          <%= f.submit "Sign up", class: "last btn-login" %>
+        </div>
+
+        <% end %>
+
+      </div>
+
+
+      <div class="login-sub">
+        <%= render "devise/shared/links" %>
+      </div>
+    </div>
+  </div>
+
+</div>

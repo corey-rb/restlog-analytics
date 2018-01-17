@@ -1,0 +1,85 @@
+#app-navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 280px;
+  background-color: #1C1C1C;
+  color: #AAAAAA;
+
+  a:hover {
+    color: #FFFFFF;
+  }
+  #aside-user {
+    padding: 0 20px;
+    margin: 36px 0 0 0;
+
+    .dropdown {
+
+      .hidden-folded {
+
+        .block {
+          display: block;
+          text-align: center;
+        }
+      }
+      .dropdown-menu {
+        display: none;
+      }
+    }
+  }
+  nav {
+    width: 280px;
+    margin: 36px 0 0 0;
+
+    > ul {
+
+      > li {
+
+        > a {
+          padding: 15px 20px;
+          display: block;
+          -webkit-transition: all 400ms ease-out;
+          -moz-transition: all 400ms ease-out;
+          transition: all 400ms ease-out;
+          border-top: 1px solid #222222;
+        }
+        > a:hover {
+          background-color: $grey-dark;
+        }
+        ul.nav-sub {
+          display: none;
+
+          > li {
+
+            > a {
+              padding: 10px  15px 10px 30px;
+              display: block;
+              background-color: #222222;
+              border-top: 1px solid #252525;
+              -webkit-transition: all 400ms ease-out;
+              -moz-transition: all 400ms ease-out;
+              transition: all 400ms ease-out;
+            }
+            > a:hover {
+              background-color: #292929;
+              padding-left: 35px;
+            }
+          }
+          > li.red {
+            border-left: 5px solid #e74c3c;
+          }
+        }
+      }
+      > li.active {
+
+        > a {
+          background-color: $grey-dark;
+        }
+        ul.nav-sub {
+          display: block;
+        }
+      }
+    }
+  }
+}

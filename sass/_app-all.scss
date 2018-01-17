@@ -1,0 +1,65 @@
+#view-app-all {
+
+  .app-list {
+    margin: -15px;
+    overflow: hidden;
+
+    .app-container {
+      padding: 15px;
+      width: 25%;
+      float: left;
+
+      .app {
+        border: 1px solid #DDDDDD;
+
+        .app-header {
+          padding: 18px 15px 15px;
+          overflow: hidden;
+          background-color: #FCFCFC;
+          border-bottom: 1px solid #DDDDDD;
+          border-top: 5px solid #4d80c6;
+
+          .app-title {
+            float: left;
+
+            a {
+              text-transform: uppercase;
+              font-size: 1.1em;
+              font-weight: 700;
+            }
+          }
+          .app-extras {
+            float: right;
+
+            .monitoring {
+
+              > div {
+                background-color: #FFFFFF;
+                border-radius: 50%;
+                -moz-border-radius: 50%;
+                -webkit-border-radius: 50%;
+                border: 1px solid #DDDDDD;
+                margin: 3px 0 0 15px;
+                height: 13px;
+                width: 13px;
+                float: right;
+              }
+              .on {
+                background-color: #27ae60;
+                border-color: #27ae60;
+              }
+              .off {
+                background-color: #c0392b;
+                border-color: #c0392b;
+              }
+            }
+          }
+        }
+        .app-details {
+          padding: 15px;
+          background-color: #FFFFFF;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+<div id="view-app-new">
+
+
+
+  <div class="page-heading">
+
+    <div class="page-name">
+      <h2>New App</h2>
+    </div>
+
+
+  </div>
+
+
+<div class="error-container">
+  <ul>
+    <li ng-repeat="err in errors">
+      {{ err }}
+  </ul>
+</div>
+
+
+<form novalidate id="NewAppForm" class="simple-form" name="appForm" role="form" ng-submit="addApp()" enctype="application/x-www-form-urlencoded">
+
+
+<div class="app-options">
+  <dl>
+    <dt>Name</dt>
+    <dd><input type="text" ng-model="app.name" ng-required name="name"/></dd>
+  </dl>
+  <dl>
+    <dt>Monitor</dt>
+    <dd>
+      <select ng-model="app.monitor" id="appmonitor">
+        <option value="true">Yes</option>
+        <option value="false">No</option>
+      </select>
+    </dd>
+  </dl>
+</div>
+
+<div class="choose-color">
+  <h3>Choose App Color:</h3>
+  <dl>
+    <dd><input id="NewAppWhite" type="radio" ng-model="app.hex" value="white" /></dd>
+    <dt>White</dt>
+  </dl>
+  <dl>
+    <dd><input id="NewAppRed" type="radio" ng-model="app.hex" value="red" /></dd>
+    <dt>Red</dt>
+  </dl>
+  <dl>
+    <dd><input id="NewAppBlue" type="radio" ng-model="app.hex" value="blue" /></dd>
+    <dt>Blue</dt>
+  </dl>
+  <dl>
+    <dd><input id="NewAppOrange" type="radio" ng-model="app.hex" value="orange" /></dd>
+    <dt>Orange</dt>
+  </dl>
+  <dl>
+    <dd><input id="NewAppGreen" type="radio" ng-model="app.hex" value="green" /></dd>
+    <dt>Green</dt>
+  </dl>
+  <dl>
+    <dd><input id="NewAppPurple" type="radio" ng-model="app.hex" value="purple" /></dd>
+    <dt>Purple</dt>
+  </dl>
+</div>
+
+  <input name="submit" type="submit" value="Save App" class="button-colored" />
+
+</form>

@@ -1,0 +1,10 @@
+#app-footer {
+  background-color: $white;
+  border-top: 1px solid $grey-light;
+  padding: 15px 30px;
+
+  .version {
+    float: right;
+  }
+
+}

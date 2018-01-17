@@ -1,0 +1,50 @@
+<div id="view-app-all">
+
+
+
+  <div class="page-heading">
+
+    <div class="page-name">
+      <h2>Apps List</h2>
+    </div>
+
+    <div class="page-options">
+      <ul>
+        <li><a class="button-colored" ui-sref="restlog.appNew">New App</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+
+
+<div class="app-list">
+  <div ng-repeat="app in apps" class="app-container">
+    <div class="app">
+
+      <div class="app-header">
+        <div class="app-title">
+          <a ui-sref="Restlog.appView({ id: app.id })">{{ app.name }}</a>
+        </div>
+        <div class="app-extras">
+          <div class="monitoring">
+            {{ app.monitoring }}
+            <div class="on">
+            </div>
+            <div class="off">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="app-details">
+        <div class="updated">
+          {{ app.updated_at }}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</div>

@@ -1,0 +1,55 @@
+#app-header {
+  background-color: $white;
+
+  .header-main {
+    background: #4d80c6;
+    background: -moz-linear-gradient(top, #4d80c6 0%, #2989d8 50%, #449fe5 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4d80c6), color-stop(50%,#2989d8), color-stop(100%,#449fe5));
+    background: -webkit-linear-gradient(top, #4d80c6 0%,#2989d8 50%,#449fe5 100%);
+    background: -o-linear-gradient(top, #4d80c6 0%,#2989d8 50%,#449fe5 100%);
+    background: -ms-linear-gradient(top, #4d80c6 0%,#2989d8 50%,#449fe5 100%);
+    background: linear-gradient(to bottom, #4d80c6 0%,#2989d8 50%,#449fe5 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d80c6', endColorstr='#449fe5',GradientType=0 );
+    padding: 20px 30px;
+    overflow: hidden;
+    color: $white;
+
+    .app-name {
+      text-transform: uppercase;
+      font-size: 2em;
+      line-height: 1em;
+      float: left;
+    }
+    .user-drop {
+      float: right;
+      margin: 0 0 0 30px;
+      line-height: 2em;
+    }
+    .notifications-drop {
+      float: right;
+      margin: 0 0 0 30px;
+      line-height: 2em;
+    }
+  }
+  .header-sub {
+    border-bottom: 1px solid $grey-light;
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(50, 50, 50, 0.45);
+    -moz-box-shadow: 0px 0px 8px 0px rgba(50, 50, 50, 0.45);
+    box-shadow: 0px 0px 8px 0px rgba(50, 50, 50, 0.45);
+    border-top: 1px solid #CCCCCC;
+    padding: 12px 30px;
+    overflow: hidden;
+
+    .drop-notifications {
+      float: left;
+
+      .notifications-list {
+        display: none;
+      }
+    }
+    .drop-user {
+      display: none;
+    }
+  }
+
+}

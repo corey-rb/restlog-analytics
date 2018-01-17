@@ -1,0 +1,148 @@
+<div id="view-app-detail">
+
+<div class="page-heading">
+
+  <div class="page-name">
+    <h2>{{ app.name }} </h2>
+  </div>
+
+  <div class="page-options">
+    <ul>
+      <li><a class="button-colored" ui-sref="restlog.appEdit({ id: app.id })">Edit</a></li>
+    </ul>
+  </div>
+
+</div>
+
+<div class="app-details">
+  <dl class="app-key">
+    <dt>App Key:</dt>
+    <dd>{{ app.app_token }}</dd>
+  </dl>
+  <dl class="monitoring-state">
+    <dt>Currently Monitoring App:</dt>
+    <dd>{{ app.monitor }}</dd>
+  </dl>
+  <dl class="message-levels">
+    <dt>Message Levels to Monitor:</dt>
+    <dd>{{ app.message_levels }}</dd>
+  </dl>
+</div>
+
+<form class="filter-options">
+
+  <dl>
+    <dt><h3>Filter By:</h3></dt>
+  </dl>
+
+  <dl>
+    <dt>Result Size:</dt>
+    <dd>
+      <select ng-model="searchQuery.page_size">
+        <option selected value="50">50</option>
+        <option value="100">100</option>
+        <option value="200">200</option>
+      </select>
+    </dd>
+  </dl>
+
+  <dl>
+    <dt>Message Level:</dt>
+    <dd>
+      <select ng-model="searchQuery.message_type">
+        <option selected value="">All</option>
+        <option value="misc">Misc</option>
+        <option value="info">Info</option>
+        <option value="debug">Debug</option>
+        <option value="warning">Warning</option>
+        <option value="error">Error</option>
+        <option value="fatal">Fatal</option>
+      </select>
+    </dd>
+  </dl>
+
+  <dl>
+    <dt>
+      Collection
+    </dt>
+    <dd>
+
+      <select id="message-filter-message-collections" class="message-collections" ng-model="searchQuery.collection">
+        <option value="">All</option>
+        <option ng-repeat="col in app.message_collections" value="{{ col.id }}">
+          {{ col.name }}: {{ col.collection_criteria_property }} = {{ col.criteria_value }}
+        </option>
+      </select>
+
+      <button class="button-colored new">New</button>
+
+    </dd>
+  </dl>
+
+  <dl>
+    <dd><button class="button-colored" ng-click="searchMessages(searchQuery)">Search</button></dd>
+  </dl>
+</form>
+
+<div class="mc-setup">
+  <dl>
+    <dt><h3>New Message Collection</h3></dt>
+  </dl>
+  <dl>
+    <dt>Collection Criteria:
+    {{ c.collection_criteria_property}} = {{ c.criteria_value }}</dt>
+  </dl>
+
+
+  <form ng-submit="saveCollection()" enctype="application/x-www-form-urlencoded" id="newCollection">
+    <input type="text" readonly="readonly" style="display:none" ng-model="c.app_id" ng-value="appid" />
+    <dl>
+  <dt>Message Root</dt>
+  <dd>
+  <select id="new-message-collection-message-root" name="" ng-model="c.collection_criteria_property" required>
+    <option></option>
+    <option ng-repeat="p in properties">{{ p }}</option>
+  </select>
+</dd>
+</dl>
+  <dl>
+  <dt>Collection Criteria Value (Optional)</dt>
+  <dd><input id="new-message-collection-criteria-value" type="text" ng-model="c.criteria_value" /></dd>
+</dl>
+<dl>
+  <dt>Name</dt>
+  <dd><input id="new-message-collection-name" type="text" value="" ng-model="c.name" required/></dd>
+</dl>
+
+<dl>
+  <dd>
+  <input type="submit" name="save" class="button-colored" />
+</dd>
+</dl>
+
+  </form>
+
+
+</div>
+
+<div class="message-event-data">
+
+  <div class="table-heading">
+    <div class="table-title">
+      Message Event Data
+    </div>
+    <div class="table-details">
+      {{ data_response_meta.results }} of {{ data_response_meta.total }}
+    </div>
+  </div>
+
+  <div class="table-data">
+    <ul ng-repeat="m in messages" class="level-{{ m.level }}">
+      <li class="date-create">{{ m.created_at }}</li>
+      <li class="data">{{ m.event_data }}</li>
+    </ul>
+  </div>
+
+</div>
+
+</div>

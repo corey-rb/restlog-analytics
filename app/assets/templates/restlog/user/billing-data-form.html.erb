@@ -1,0 +1,25 @@
+<h2>Billing Information</h2>
+<form novalidate class="simple-form" role="form" ng-submit="updateBilling(user)" enctype="application/x-www-form-urlencoded">
+    First Name:
+  <input type="text" ng-model="user.billing_data.first_name" name="firstName" ng-required /><br/>
+  Last Name:
+  <input type="text" ng-model="user.billing_data.last_name" name="lastName" ng-required /><br/>
+  Address 1:
+  <input type="text" ng-model="user.billing_data.address1" name="address1" ng-required /><br/>
+  Address 2:
+  <input type="text" ng-model="user.billing_data.address2" name="address2" /><br/>
+  City:
+  <input type="text" ng-model="user.billing_data.city" name="city" /><br/>
+  State:
+  <input type="text" ng-model="user.billing_data.state" name="state" /><br/>
+  Zip Code:
+  <input type="text" ng-model="user.billing_data.zipcode" name="zipcode" /><br/>
+  Credit Card Type:
+  <input type="text" ng-model="user.billing_data.card_type" name="cardType" /><br/>
+  Verification Code:
+  <input type="text" ng-model="user.billing_data.verification_code" name="verificationCode" /><br/>
+  Expiration Date:
+  <input type="text" ng-model="user.billing_data.expiration_date" name="expirationDate" /><br/>
+  <input type="submit" name="submit" />
+  <input type="reset" />
+</form>

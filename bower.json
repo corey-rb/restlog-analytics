@@ -1,0 +1,26 @@
+{
+    "lib": {
+        "name": "bower-rails generated lib assets",
+        "dependencies": {
+            "angular": "~1.4",
+            "angular-animate": "~1.4",
+            "angular-cookies": "~1.4",
+            "angular-resource": "~1.4",
+            "angular-touch": "~1.4",
+            "angular-sanitize": "~1.4",
+            "angular-translate": "~2.2",
+            "angular-ui-router": "~0.2",
+            "angular-ui-grid": "~3.0",
+            "underscore": "latest" ,
+            "d3": "3.5.3",
+            "Chart.js": "~1.0.1",
+            "checklist-model": "latest",
+            "dragula.js": "latest"
+        }
+    },
+    "vendor": {
+        "name": "bower-rails generated vendor assets",
+        "dependencies": {
+        }
+    }
+}

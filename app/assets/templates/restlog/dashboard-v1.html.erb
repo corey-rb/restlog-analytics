@@ -1,0 +1,91 @@
+<div ng-init="
+    app.settings.asideFolded = false;
+    app.settings.asideDock = false;">
+
+  <script src="http://d3js.org/d3.v2.js"></script>
+
+  <div class="view-title">
+    <h1 class="title-main">Dashboard</h1>
+    <span class="title-sub">Welcome to Restlog</span>
+  </div>
+
+
+
+
+  <div id="chart-master-container" ng-controller="RestlogDashboardCtrl">
+
+    <span class="message-count">New Messages: {{ recentMessages }}</span>
+
+
+      <div class="chart-container">
+        <div>
+          <div class="project-header">
+            <div class="project-color-bar"></div>
+            <div class="project-title">Project Title</div>
+            <div class="extras">
+              <div class="move"></div>
+              <div class="shrink"></div>
+            </div>
+          </div>
+          <div class="project-info">
+            <label for="dlyAppCnt">Top App Activity Today</label>
+            <canvas id="dlyAppCnt" width="400" height="400"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <div class="chart-container">
+        <div>
+          <div class="project-header">
+            <div class="project-color-bar"></div>
+            <div class="project-title">Project Title</div>
+            <div class="extras">
+              <div class="move"></div>
+              <div class="shrink"></div>
+            </div>
+          </div>
+          <div class="project-info">
+            <canvas id="barChart" width="400" height="400"></canvas>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="chart-container">
+        <div>
+          <div class="project-header">
+            <div class="project-color-bar"></div>
+            <div class="project-title">Project Title</div>
+            <div class="extras">
+              <div class="move"></div>
+              <div class="shrink"></div>
+            </div>
+          </div>
+          <div class="project-info">
+            <span id="linechartLegend"></span>
+            <canvas id="lineChart" width="600" height="400"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <div class="chart-container">
+        <div>
+          <div class="project-header">
+            <div class="project-color-bar"></div>
+            <div class="project-title">Project Title</div>
+            <div class="extras">
+              <div class="move"></div>
+              <div class="shrink"></div>
+            </div>
+          </div>
+          <div class="project-info">
+            <span id="polarAreaLegend"></span>
+            <canvas id="polarChart" width="600" height="400"></canvas>
+          </div>
+        </div>
+      </div>
+
+
+  </div>
+
+</div>

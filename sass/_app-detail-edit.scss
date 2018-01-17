@@ -1,0 +1,53 @@
+#view-app-detail-edit {
+
+  .app-edit-options {
+    margin: 0 0 30px 0;
+
+    .monitoring-levels {
+
+      > dl {
+        margin: 8px 0 0 0;
+        overflow: hidden;
+
+        > dt {
+          float: left;
+          margin: 0 0 0 5px;
+          line-height: 1em;
+        }
+        > dd {
+          float: left;
+          line-height: 1em;
+        }
+      }
+      .button-selections {
+        margin: 20px 0 0 0;
+
+        button {
+          margin: 0 15px 0 0;
+        }
+      }
+    }
+  }
+  .choose-color {
+    margin: 0 0 30px 0;
+
+    h3 {
+      font-weight: $weight-medium;
+      text-transform: uppercase;
+    }
+    > dl {
+      margin: 8px 0 0 0;
+      overflow: hidden;
+
+      > dt {
+          float: left;
+          margin: 0 0 0 5px;
+          line-height: 1em;
+      }
+      > dd {
+        float: left;
+        line-height: 1em;
+      }
+    }
+  }
+}

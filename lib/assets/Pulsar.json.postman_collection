@@ -1,0 +1,56 @@
+{
+	"id": "9c16818c-1591-8710-a313-34dbf173704f",
+	"name": "Restlog",
+	"description": "",
+	"order": [
+		"84814160-8a52-394c-f05d-ee367f7a65a5"
+	],
+	"folders": [],
+	"timestamp": 1415401679837,
+	"synced": false,
+	"requests": [
+		{
+			"id": "84814160-8a52-394c-f05d-ee367f7a65a5",
+			"headers": "",
+			"url": "localhost:3000/api/v1/messages",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [
+				{
+					"key": "message[short_message]",
+					"value": "test short message1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "Restlog[app_key]",
+					"value": "app10003",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "Restlog[api_key]",
+					"value": "Restlogkey",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "message[event]",
+					"value": "{   \"levels\": [     1,     2,     3   ],   \"canFail\": true,   \"lastLogin\": null,   \"number\": 123,   \"object\": {     \"levelOneProgress\": \"b\",     \"levelTwoProgress\": \"d\",     \"levelThreeProgress\": \"f\"   },   \"string\": \"Hello World\" }",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"version": 2,
+			"tests": "",
+			"time": 1415473451249,
+			"name": "Save Message",
+			"description": "",
+			"collectionId": "9c16818c-1591-8710-a313-34dbf173704f",
+			"responses": [],
+			"synced": false
+		}
+	]
+}

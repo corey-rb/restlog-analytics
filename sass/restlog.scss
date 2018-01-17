@@ -1,0 +1,23 @@
+//Global Variables that we can use in any partial
+
+$white: #FFFFFF;
+$grey-dark: #151515;
+$grey-light: #DDDDDD;
+$blue: #2484c4;
+$red: #FF0000;
+$weight-ligt: 100;
+$weight-medium: 500;
+$weight-heavy: 700;
+
+//List of partials for Restlog
+
+@import "global";
+@import "login";
+@import "dashboard";
+@import "sidenavigation";
+@import "header";
+@import "footer";
+@import "app-detail";
+@import "app-detail-edit";
+@import "app-all";
+@import "app-new";
